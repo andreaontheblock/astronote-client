@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-page.component.css']
 })
 export class ProfilePageComponent implements OnInit {
+  isME: Boolean;
 
-  constructor() { }
+  constructor() {
+  // this.userService.getOne(id)
+  //     .then(response => this.user = response);
+  }
 
   ngOnInit() {
   }
