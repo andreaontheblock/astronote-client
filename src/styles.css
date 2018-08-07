@@ -27,7 +27,9 @@ body {
   line-height: 147%;
 }
 
-h1 {}
+h1 {
+  margin-top: 0;
+}
 
 h2 {}
 
@@ -46,21 +48,34 @@ ul {
 
 /* ---- layout ---- */
 
+html, body {
+  height: 100%;
+}
+
 #site-header {
+  height: 60px;
   padding: 15px 0;
   color: white;
   background: #111;
 }
 
 #site-footer {
-  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
   padding: 18px 0;
+  color: white;
   background: #111;
   font-size: smaller;
 }
 
 #site-main {
+  overflow: auto ;
+  height: calc(100vh - 120px);
   margin-bottom: 60px;
+  padding-top: 20px;
+  background-color: #faff08;
 }
 
 .container {
@@ -79,54 +94,6 @@ ul {
   }
 }
 
-
-
-
-/* ---- components ---- */
-
-#nav-bar {
- display: flex;
- justify-content: flex-start;
- /* background-color:#F0F0F0 */
-}
-
-#nav-bar a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: white;
-}
-
-#site-main {
-  background-color: #faff08 ;
-}
-
-#add-link {
-  font-size: 60px;
-}
-
-.user-me {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.notes-sorted {
-  border: 2px solid red;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center
-}
-
-.not-found {
-  display: flex;
-  justify-content: center;
-  background-image: url("./assets/images/Portal-Gun.jpg");
-  height: 400px;
-  width:400px;
-  background-size: cover;
-  font-size: 60px;
-}
 
 /* -- forms -- */
 
@@ -174,3 +141,70 @@ form .validation {
 form .field.has-error input {
 	border: 1px solid  red;
 }
+
+
+/* -- nav-bar -- */
+
+#nav-bar {
+  display: flex;
+  justify-content: flex-start;
+  /* background-color:#F0F0F0 */
+ }
+ 
+ #nav-bar a {
+   margin-left: 20px;
+   text-decoration: none;
+   color: white;
+ }
+ 
+
+/* -- footer -- */
+
+#site-footer .copyright {
+  font-size: 14px;
+}
+
+#add-note {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  line-height: 52px;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  background-color: green;
+  border-radius: 50%;
+}
+
+
+/* ---- components ---- */
+
+
+
+
+/* ---- RESPONSIVE ---- */
+
+
+/* - iPad - */
+@media (min-width: 768px) {
+  #site-header {
+    height: 80px;
+  }
+
+  #site-footer {
+    height: 80px;
+  }
+
+  #site-main {
+    height: calc(100vh - 160px);
+  }
+
+  #add-note {
+    bottom: 50px;
+    right: 20px;
+  }
+}
+
+ 

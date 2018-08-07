@@ -1,0 +1,10 @@
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  background-image: url("../../../assets/images/Portal-Gun.jpg");
+  height: 400px;
+  width:400px;
+  background-size: cover;
+  font-size: 60px;
+}

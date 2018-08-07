@@ -5,6 +5,7 @@
           <span class="username text">loading...</span>
         </div>
         <div *ngIf="!loading && !!user">
+          <a [routerLink]="['/user']">everyone</a>
           <a [routerLink]="['/user', user._id]">{{user.username}}</a>
           <a (click)="logout()">logout</a>
         </div>
@@ -15,12 +16,17 @@
       </div>  
 </header>
 
-<div id="site-main" class="container contain-page">
-  <router-outlet></router-outlet>
+<div id="site-main">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
 <footer id="site-footer">
+  <a *ngIf= "!loading && user" id="add-note" [routerLink]="['/create']"> + </a>
   <div class="container">
+    <div class="copyright">
       &copy; Andrea Moya  IRONHACK BCN 2018
+    </div>
   </div>
 </footer>

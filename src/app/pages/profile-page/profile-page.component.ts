@@ -11,6 +11,7 @@ import { NoteService } from '../../services/note.service';
   styleUrls: ['./profile-page.component.css']
 })
 export class ProfilePageComponent implements OnInit {
+  loaded = false;
   isMe: Boolean = false;
   notes: Array<any>;
   user: any;
@@ -21,16 +22,18 @@ export class ProfilePageComponent implements OnInit {
     private userService: UserService,
     private authService: AuthService,
     private noteService: NoteService
-    ) {
+  ) {
+
     const currentUser = this.authService.getUser();
     this.route.params.subscribe((params) => {
       this.userService.getOne(params.id)
-      .then((response) => {
-        this.user = response[0];
+      .then((response: any) => {
+        this.loaded = true;
+        this.user = response.user;
         if (this.user._id === currentUser._id) {
           this.isMe = true;
-         }
-        this.notes = response[1];
+        }
+        this.notes = response.notes;
       })
       .catch((error) => {
         console.log('ERROR');
