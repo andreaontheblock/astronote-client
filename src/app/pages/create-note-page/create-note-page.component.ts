@@ -23,8 +23,8 @@ export class CreateNotePageComponent implements OnInit {
         content: this.content
       };
       this.noteService.createOne(noteInfo)
-        .then(() => {
-         this.router.navigate(['/']);
+        .then((result: any) => {
+         this.router.navigate(['/note', result._id]);
         })
         .catch((err) => {
           console.log(err);
