@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://astronote-server.herokuapp.com/'
+  apiUrl: 'https://astronote-server.herokuapp.com/'
 };
