@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
+import { environment } from '../../environments/environment';
+const apiUrl = environment.apiUrl + '/name-of-resource';
 
 
 @Injectable({
