@@ -5,11 +5,13 @@
           <span class="username text">loading...</span>
         </div>
         <div *ngIf="!loading && !!user">
+          <a [routerLink]="['/welcome']">HOME </a>
           <a [routerLink]="['/user']">everyone</a>
           <a [routerLink]="['/user', user._id]">{{user.username}}</a>
           <a (click)="logout()">logout</a>
         </div>
         <div *ngIf="!loading && anon">
+          <a [routerLink]="['/welcome']">HOME </a>
           <a [routerLink]="['/login']">login</a>
           <a [routerLink]="['/signup']">signup</a>
         </div>
