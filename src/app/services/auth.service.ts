@@ -3,7 +3,6 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
 import { environment } from '../../environments/environment';
-const apiUrl = environment.apiUrl + '/name-of-resource';
 
 
 @Injectable({
@@ -14,7 +13,7 @@ export class AuthService {
   private user: any;
   private userChange: Subject<any> = new Subject();
 
-  private baseURL = 'http://localhost:3000/auth';
+  private baseURL = environment.apiUrl + 'auth';
 
   userChange$: Observable<any> = this.userChange.asObservable();
 

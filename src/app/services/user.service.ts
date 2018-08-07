@@ -8,7 +8,7 @@ const apiUrl = environment.apiUrl + '/name-of-resource';
 })
 export class UserService {
 
-  private baseURL = 'http://localhost:3000/user';
+  private baseURL = environment.apiUrl + 'user';
 
   constructor(private httpClient: HttpClient) { }
   getOne(id) {
