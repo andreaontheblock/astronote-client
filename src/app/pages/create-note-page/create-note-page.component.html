@@ -1,0 +1,16 @@
+<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate>
+
+  <div class="field">
+    <label>Title</label>
+    <input type="text" name="title" [(ngModel)]="title" #noteField="ngModel" required/>
+  </div>
+
+  <div class="field">
+      <label>Content</label>
+      <input type="text" name="content" [(ngModel)]="content" #noteField="ngModel" required/>
+    </div>
+
+  <div class="field submit">
+    <button type="submit">Create</button>
+  </div>
+</form>

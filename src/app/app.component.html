@@ -1,11 +1,11 @@
 <header id="site-header">
-    <link href="https://fonts.googleapis.com/css?family=Kirang+Haerang" rel="stylesheet">
-    <div [ngClass]="{'is-user': user, 'is-anon': anon}">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <div id="nav-bar" [ngClass]="{'is-user': user, 'is-anon': anon}">
         <div *ngIf="loading">
           <span class="username text">loading...</span>
         </div>
         <div *ngIf="!loading && !!user">
-          <a [routerLink]="['/profile']">{{user.username}}</a>
+          <a [routerLink]="['/user', user._id]">{{user.username}}</a>
           <a (click)="logout()">logout</a>
         </div>
         <div *ngIf="!loading && anon">
@@ -15,7 +15,7 @@
       </div>  
 </header>
 
-<div id="site-main" class="container">
+<div id="site-main" class="container contain-page">
   <router-outlet></router-outlet>
 </div>
 

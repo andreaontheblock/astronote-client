@@ -31,11 +31,11 @@ export class SignupPageComponent implements OnInit {
         .then(() => {
          this.router.navigate(['/']);
         })
-      .catch((err) => {
-        this.error = err.error; // :-)
-        this.processing = false;
-        this.feedbackEnabled = false;
-      });
+        .catch((err) => {
+          this.error = err.error; // :-)
+          this.processing = false;
+          this.feedbackEnabled = false;
+        });
       }
   }
 

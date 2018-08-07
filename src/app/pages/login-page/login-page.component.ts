@@ -24,8 +24,8 @@ export class LoginPageComponent implements OnInit {
     if (form.valid) {
       this.processing = true;
       this.authService.login(this.username, this.password)
-        .then(() => {
-         this.router.navigate(['/']);
+        .then((result: any) => {
+         this.router.navigate(['/user', result._id]);
         })
       .catch((err) => {
         this.error = err.error;

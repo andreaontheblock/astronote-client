@@ -64,7 +64,10 @@ export class AuthService {
     };
     return this.httpClient.post(`${this.baseURL}/logout`, {}, options)
       .toPromise();
+  }
 
+  getUser(): any {
+    return this.user;
   }
 
 

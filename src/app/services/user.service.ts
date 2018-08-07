@@ -9,11 +9,11 @@ export class UserService {
   private baseURL = 'http://localhost:3000/user';
 
   constructor(private httpClient: HttpClient) { }
-  getOne() {
+  getOne(id) {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.baseURL}/id`, options)
+    return this.httpClient.get(`${this.baseURL}/${id}`, options)
      .toPromise();
   }
 
