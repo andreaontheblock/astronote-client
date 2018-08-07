@@ -1,4 +1,9 @@
 <form class="container" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate>
+    <input list="browsers">
+    <datalist id="browsers">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist> 
 
   <div class="field">
     <label>Title</label>

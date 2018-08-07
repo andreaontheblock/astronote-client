@@ -75,7 +75,7 @@ html, body {
   height: calc(100vh - 120px);
   margin-bottom: 60px;
   padding-top: 20px;
-  background-image: url("../../../final-project/client/src/assets/images/atmosphere.jpeg")
+  background-image: url("./assets/images/atmosphere.jpeg")
 }
 
 .container {
