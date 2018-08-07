@@ -1,0 +1,17 @@
+
+.welcome {
+  background-size: cover;
+  height: 100vh;
+}
+
+.welcome.user {
+  background-image: url("src/assets/images/welcome.png");
+}
+
+.welcome.anon {
+  background-image: url("src/assets/images/alien.png");
+}
+
+#site-main {
+  padding-top: 0px;
+}

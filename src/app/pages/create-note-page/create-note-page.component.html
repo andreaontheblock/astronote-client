@@ -1,4 +1,4 @@
-<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate>
+<form class="container" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate>
 
   <div class="field">
     <label>Title</label>
@@ -7,7 +7,7 @@
 
   <div class="field">
       <label>Content</label>
-      <input type="text" name="content" [(ngModel)]="content" #noteField="ngModel" required/>
+      <textarea type="text" name="content" [(ngModel)]="content" #noteField="ngModel" required rows="9" cols="33" wrap="hard"></textarea> 
     </div>
 
   <div class="field submit">

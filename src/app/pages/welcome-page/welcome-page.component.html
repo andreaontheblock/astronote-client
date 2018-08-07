@@ -1,0 +1,14 @@
+<div class="welcome" [ngClass]="{user: user, anon: !user}">
+  <div class="container">
+    <h1>WELCOME  TO  ASTRONOTE!</h1>
+    <div *ngIf="user">
+      welcome back {{user.username}}
+      click here to ....
+    </div>
+    <div *ngIf="!user">
+      welcome stranger
+      click here to ....
+    </div>
+  </div>
+</div> 
+  

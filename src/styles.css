@@ -75,7 +75,7 @@ html, body {
   height: calc(100vh - 120px);
   margin-bottom: 60px;
   padding-top: 20px;
-  background-color: #faff08;
+  background-image: url("../../../final-project/client/src/assets/images/atmosphere.jpeg")
 }
 
 .container {
@@ -174,7 +174,7 @@ form .field.has-error input {
   text-align: center;
   font-size: 60px;
   color: white;
-  background-color: green;
+  background-color: #66cc00;
   border-radius: 50%;
 }
 

@@ -1,13 +1,14 @@
-<div class="user-me" *ngIf="loaded">
-  <h2 *ngIf= "isMe">Notes by Me</h2>
-  <h2 *ngIf= "!isMe">Notes by {{user.username}}</h2>
+<div class="container">
 
-  <div *ngIf="notes" class="notes-sorted">
-    <ul>
-      <li *ngFor= "let note of notes"><a [routerLink]="['/note', note._id]">{{note.title}}</a></li>
-    </ul>
+  <div class="user-me" *ngIf="loaded">
+    <h2 *ngIf= "isMe">Notes by Me</h2>
+    <h2 *ngIf= "!isMe">Notes by {{user.username}}</h2>
+    
+    <div *ngIf="notes" class="notes-sorted">
+      <ul>
+        <li *ngFor= "let note of notes"><a [routerLink]="['/note', note._id]">{{note.title}}</a></li>
+      </ul>
+    </div>
   </div>
-
+  
 </div>
-
-

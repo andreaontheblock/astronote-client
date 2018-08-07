@@ -20,10 +20,12 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { CreateNotePageComponent } from './pages/create-note-page/create-note-page.component';
 import { NoteDetailPageComponent } from './pages/note-detail-page/note-detail-page.component';
+import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'user', pathMatch: 'full'},
+  { path: '', redirectTo: 'welcome', pathMatch: 'full'},
+  { path: 'welcome', component:  WelcomePageComponent,  canActivate: [ InitAuthGuard ]},
   { path: 'signup', component: SignupPageComponent,  canActivate: [ RequireAnonGuard ]},
   { path: 'login', component: LoginPageComponent,  canActivate: [ RequireAnonGuard ]},
   { path: 'user', component: UserPageComponent,  canActivate: [ RequireUserGuard ]},
@@ -46,6 +48,7 @@ const routes: Routes = [
     UserPageComponent,
     CreateNotePageComponent,
     NoteDetailPageComponent,
+    WelcomePageComponent,
   ],
   imports: [
     BrowserModule,
