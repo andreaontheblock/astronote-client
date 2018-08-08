@@ -24,7 +24,7 @@ body {
   color: #111;
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
-  line-height: 147%;
+  line-height: 200%;
 }
 
 h1 {
@@ -54,7 +54,7 @@ html, body {
 
 #site-header {
   height: 60px;
-  padding: 15px 0;
+  /* padding: 15px 0; */
   color: white;
   background: #111;
 }
@@ -71,10 +71,10 @@ html, body {
 }
 
 #site-main {
-  overflow: auto ;
+  overflow: auto;
   height: calc(100vh - 120px);
   margin-bottom: 60px;
-  padding-top: 20px;
+  padding-top: 0px;
   background-image: url("./assets/images/atmosphere.jpeg")
 }
 
@@ -147,14 +147,21 @@ form .field.has-error input {
 
 #nav-bar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   /* background-color:#F0F0F0 */
+ }
+ .items {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 60px;
  }
  
  #nav-bar a {
-   margin-left: 20px;
    text-decoration: none;
    color: white;
+   line-height: 15px;
  }
  
 
@@ -206,5 +213,27 @@ form .field.has-error input {
     right: 20px;
   }
 }
+
+/* - DESKTOP - */
+@media (min-width: 1300px) {
+  #site-header {
+    height: 120px;
+  }
+
+  #site-footer {
+    height: 80px;
+  }
+
+  #site-main {
+    height: calc(100vh - 160px);
+  }
+
+  #add-note {
+    bottom: 50px;
+    right: 20px;
+  }
+}
+
+ 
 
  

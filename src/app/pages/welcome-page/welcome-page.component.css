@@ -5,11 +5,11 @@
 }
 
 .welcome.user {
-  background-image: url("src/assets/images/welcome.png");
+  background-image: url("src/assets/images/welcome-astronote.png");
 }
 
 .welcome.anon {
-  background-image: url("src/assets/images/alien.png");
+  background-image: url("src/assets/images/welcome-alien.png");
 }
 
 #site-main {

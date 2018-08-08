@@ -4,14 +4,14 @@
         <div *ngIf="loading">
           <span class="username text">loading...</span>
         </div>
-        <div *ngIf="!loading && !!user">
-          <a [routerLink]="['/welcome']">HOME </a>
-          <a [routerLink]="['/user']">everyone</a>
-          <a [routerLink]="['/user', user._id]">{{user.username}}</a>
-          <a (click)="logout()">logout</a>
+        <div class="items" *ngIf="!loading && !!user">
+          <a [routerLink]="['/welcome']"><img src="../assets/images/home.png" alt="Home"></a>
+          <a [routerLink]="['/user']"><img src="../assets/images/friends.png" alt="All users"></a>
+          <a [routerLink]="['/user', user._id]"><img src="../assets/images/astronote-face-good.png" alt="user"></a>
+          <a (click)="logout()"><img src="../assets/images/logout.png" alt="logout"></a>
         </div>
-        <div *ngIf="!loading && anon">
-          <a [routerLink]="['/welcome']">HOME </a>
+        <div class="items" *ngIf="!loading && anon">
+          <a [routerLink]="['/welcome']"><img src="../assets/images/home.png" alt="Home"></a>
           <a [routerLink]="['/login']">login</a>
           <a [routerLink]="['/signup']">signup</a>
         </div>

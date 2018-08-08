@@ -1,10 +1,12 @@
-
-.not-found {
+.container2 {
   display: flex;
   justify-content: center;
-  background-image: url("../../../assets/images/Portal-Gun.png");
-  height: 400px;
+  align-content: center;
+  padding-top: 10%;
+}
+.not-found {
+  height: 365px;
   width:400px;
   background-size: cover;
-  font-size: 60px;
+  background-image: url("../../../assets/images/Portal-Gun.png");
 }
