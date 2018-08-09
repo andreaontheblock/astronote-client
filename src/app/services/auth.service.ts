@@ -3,6 +3,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { mapChildrenIntoArray } from '../../../node_modules/@angular/router/src/url_tree';
 
 
 @Injectable({
@@ -73,3 +74,21 @@ export class AuthService {
 
 
 }
+
+
+// lo que iria en map.service
+
+// import { Injectable } from '@angular/core';
+// import { environment } from '../../environments/environment';
+
+// import * as mapboxgl from 'mapbox-gl';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class MapService {
+
+//   constructor() {
+//     mapboxgl.accessToken = environment.mapbox.accessToken;
+//    }
+// }
