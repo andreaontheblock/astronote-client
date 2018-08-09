@@ -5,10 +5,14 @@
   align-items: center;
 }
 
+.user-me h2 {
+  border-bottom: 3px solid black;
+  display: inline;
+}
+
 .notes-sorted {
-  border: 2px solid red;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center
+  justify-content: flex-start;
 }

@@ -26,6 +26,15 @@ export class NoteService {
      .toPromise();
   }
 
+  deleteOne(id) {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.delete(`${this.baseURL}/${id}/delete`, options)
+     .toPromise();
+  }
+
+
   // getAllByUser(userId) {
   //   const options = {
   //     withCredentials: true

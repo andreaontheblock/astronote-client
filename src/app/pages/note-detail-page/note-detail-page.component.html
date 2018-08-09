@@ -4,4 +4,7 @@
     <h1>{{note.title}}</h1>
     <p>{{note.content}}</p>
   </div>
+  <div *ngIf="note.owner === user._id" class="trash">
+    <button (click)="handleDeleteClick(note._id)"><img src="../assets/images/trash-button.png" alt="Trash"></button>
+  </div>
 </div>

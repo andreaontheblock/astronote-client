@@ -4,8 +4,15 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000/'
+  apiUrl: 'http://localhost:3000/',
+
+  mapbox: {
+    accessToken: 'pk.eyJ1IjoiYW5kcmVhb250aGVibG9jayIsImEiOiJjamtsMW04YjIxZGluM3BwMDY5MGR3YmZ1In0.USeB0wgXa0wu47T41CpBlA'
+
+  }
 };
+
+
 
 /*
  * In development mode, to ignore zone related error stack frames such as

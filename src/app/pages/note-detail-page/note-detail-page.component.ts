@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NoteService } from '../../services/note.service';
-import { ActivatedRoute } from '../../../../node_modules/@angular/router';
+import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-note-detail-page',
@@ -9,9 +10,12 @@ import { ActivatedRoute } from '../../../../node_modules/@angular/router';
 })
 export class NoteDetailPageComponent implements OnInit {
  note: any;
+ user: any;
   constructor(
     private route: ActivatedRoute,
-    private noteService: NoteService
+    private noteService: NoteService,
+    private router: Router,
+    private authService: AuthService
     ) {
     this.route.params.subscribe((params) => {
       this.noteService.getOne(params.id)
@@ -26,6 +30,14 @@ export class NoteDetailPageComponent implements OnInit {
     });
   }
   ngOnInit() {
+    this.user = this.authService.getUser();
+  }
+
+  handleDeleteClick(id) {
+    this.noteService.deleteOne(id)
+    .then(() => {
+      this.router.navigate(['/user', this.user._id]);
+    });
   }
 
 }

@@ -1,21 +1,35 @@
-<form class="container" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate>
-  <!-- <label>Category</label>  
-  <select list="browsers">
-      <option value="Normal Note" selected>Normal</option>
-      <option value="Location" >Normal2</option>
-  </select> -->
+<div class="wrap">
 
-  <div class="field">
-    <label>Title</label>
-    <input type="text" name="title" [(ngModel)]="title" #noteField="ngModel" required/>
-  </div>
+  <form class="container" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate>
 
-  <div class="field">
-      <label>Content</label>
-      <textarea type="text" name="content" [(ngModel)]="content" #noteField="ngModel" required rows="9" cols="33" wrap="hard"></textarea> 
+    <!-- <label>Category</label>  
+    <select [(ngModel)]="select" name="select">
+      <option value="normal">Normal</option>
+      <option value="location" >Location</option>
+    </select> -->
+   
+    <!-- <div *ngIf="select === 'location'">LOOOL</div> -->
+
+    <div class="normal">
+      <div class="field">
+        <label>Title</label>
+        <input type="text" name="title" [(ngModel)]="title" #noteField="ngModel" required/>
+      </div>
+      
+      <div class="field">
+        <label>Content</label>
+        <textarea type="text" name="content" [(ngModel)]="content" #noteField="ngModel" required rows="15" cols="60" wrap="hard"></textarea> 
+      </div>
     </div>
+    <!-- <div class="location" >
+      <div class="map-container">
+        <div id='map' style='width: 350px; height: 200px;'></div>
+      </div>
+    </div> -->
+      <div class="field submit">
+        <button type="submit">Create</button>
+      </div>
+    </form> 
+</div>    
+    
 
-  <div class="field submit">
-    <button type="submit">Create</button>
-  </div>
-</form>

@@ -29,7 +29,7 @@
       
       <div *ngIf="error" class="validation">
         <div [ngSwitch]="error.code">
-          <!-- ojo piojo sino hace username menos not menos unique ES necesario " ' -->
+          <!-- ojo hace 'username' menos 'not' menos 'unique' ES necesario " ' -->
           <p *ngSwitchCase="'username-not-unique'">Username is taken</p>
           <p *ngSwitchDefault>An unexpected error ocurred</p>
         </div>
